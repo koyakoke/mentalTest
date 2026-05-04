@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>心理アプリMVP</title>
+</head>
+<body>
+
+<h2 id="story"></h2>
+<p id="explain"></p>
+
+<button onclick="answer(1)">① 言い返す</button>
+<button onclick="answer(2)">② 距離を取る</button>
+<button onclick="answer(3)">③ 一度考える</button>
+
+<p id="result"></p>
+
+<script>
+const data = {
+  story: "上司に詰められてイラついた",
+  explain: "これは『投影』という心理です",
+  answers: {
+    1: "さらに悪化するかも",
+    2: "距離を取るのもあり",
+    3: "相手の心理を考えると楽になる"
+  }
+}
+
+document.getElementById("story").innerText = data.story;
+document.getElementById("explain").innerText = data.explain;
+
+function answer(num) {
+  document.getElementById("result").innerText = data.answers[num];
+}
+</script>
+
+</body>
+</html>
